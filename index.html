@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quality Vision</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#08090B" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              soft: '0 18px 55px rgba(0,0,0,0.32)',
+            },
+          },
+        },
+      }
+    </script>
+      <style>
+        :root {
+          --bg: #F3F4F6;
+          --surface: #FFFFFF;
+          --surface-muted: #E8EAED;
+          --border: #D1D5DB;
+          --text: #16181D;
+          --muted: #626874;
+          --accent: #292D34;
+          --accent-hover: #444A54;
+          --accent-text: #FFFFFF;
+          --accent-muted: #D9DCE2;
+          color-scheme: light;
+        }
+        :root[data-theme='dark'] {
+          --bg: #08090B;
+          --surface: #101216;
+          --surface-muted: #0B0C0F;
+          --border: #282B31;
+          --text: #F4F5F7;
+          --muted: #969BA5;
+          --accent: #D9DCE2;
+          --accent-hover: #B8BDC7;
+          --accent-text: #08090B;
+          --accent-muted: #555A64;
+          color-scheme: dark;
+        }
+        html, body, #root { min-height: 100%; background: var(--bg); }
+        html, body { transition: background-color .2s ease, color .2s ease; }
+      </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
